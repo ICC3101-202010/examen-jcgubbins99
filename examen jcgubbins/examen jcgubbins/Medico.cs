@@ -20,5 +20,18 @@ namespace examen_jcgubbins
             this.Puntosexperiencia = puntose;
 
         }
+        public override void Verinformacionpersona()
+        {
+            Console.WriteLine("Nombre: " + Nombre);
+            Console.WriteLine("Puntos de experiencia: " + Puntosexperiencia);
+        }
+        public void Evaluar(Jugador j)
+        {
+
+        }
+        public void Curar(Jugador j)
+        {
+
+        }
     }
 }

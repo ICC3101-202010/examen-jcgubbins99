@@ -12,12 +12,15 @@ namespace examen_jcgubbins
     {
         static void Main()
         {
-            Console.WriteLine("BIENVENIDO, INGRESE EL NUMERO DE LO QUE DESEA HACER: ");
-            Console.WriteLine(" 1. CREAR EQUIPO");
-            Console.WriteLine(" 2. SALIR");
+            
+            
             string opcion5 = "";
             while (opcion5 != "2")
             {
+                Console.Clear();
+                Console.WriteLine("BIENVENIDO, INGRESE EL NUMERO DE LO QUE DESEA HACER: ");
+                Console.WriteLine(" 1. CREAR EQUIPO");
+                Console.WriteLine(" 2. SALIR");
                 opcion5 = Console.ReadLine();
                 switch (opcion5)
                 {
@@ -146,7 +149,7 @@ namespace examen_jcgubbins
 
 
                         }
-                        Thread.Sleep(2000);
+                        Thread.Sleep(1000);
                         Console.WriteLine("VAMOS A CREAR AL ENTRENADOR DEL EQUIPO");
                         Thread.Sleep(1000);
                         string nombree = "";
@@ -256,6 +259,42 @@ namespace examen_jcgubbins
                             Thread.Sleep(1000);
                             eq.Corroborarnacionalidad(jugadorescreados);
                         }
+                        Console.Clear();
+                        string opcion00 = "";
+                        while(opcion00 != "2")
+                        {
+                            Console.Clear();
+                            Console.WriteLine("A H O R A   V E A M O S   E L    E Q U I P O");
+                            Console.WriteLine("1. VER EQUIPO CREADO");
+                            Console.WriteLine("2. ATRAS");
+                            opcion00 = Console.ReadLine();
+                            switch (opcion00)
+                            {
+                                case "1":
+                                    eq.Verinformacionequipo(eq);
+                                    string opcion01 = "";
+                                    while (opcion01 != "1")
+                                    {
+                                        Console.WriteLine("1. ATRAS");
+                                        opcion01 = Console.ReadLine();
+                                        switch (opcion01)
+                                        {
+                                            case "1":
+                                                break;
+                                            default:
+                                                Console.WriteLine("SELECCIONE UNA OPCION VALIDA");
+                                                break;
+                                        }
+                                    }
+                                        break;
+                                case "2":
+                                    break;
+                                default:
+                                    Console.WriteLine("SELECCIONE UNA OPCION VALIDA");
+                                    break;
+                            }
+                        }
+                        
                         break;
                     case "2":
                         Console.WriteLine("CERRANDO EL PROGRAMA");

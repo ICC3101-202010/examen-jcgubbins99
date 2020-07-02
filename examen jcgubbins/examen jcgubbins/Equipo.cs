@@ -48,17 +48,59 @@ namespace examen_jcgubbins
             }
         if (nacion == "si")
             {
+                Console.WriteLine("");
                 Console.WriteLine("Este equipo efectivamente pertenece a una seleccion nacional");
-                Thread.Sleep(2000);
+                Thread.Sleep(3000);
                 
 
             }
         if (nacion == "no")
             {
+                Console.WriteLine("");
                 Console.WriteLine("Este equipo NO pertenece a una seleccion nacional, es un equipo de liga, se le cambiara su descripcion");
-                Thread.Sleep(2000);
+                Thread.Sleep(3000);
                 this.Tipodeequipo = "Equipo de liga";
             }
+        }
+        public void Verinformacionequipo(Equipo e)
+        {
+            Console.WriteLine(" ===========");
+            Console.WriteLine("EQUIPO: " + nombreequipo);
+            Console.WriteLine(" ===========");
+            Console.WriteLine("");
+            Console.WriteLine(" ===========");
+            Console.WriteLine(" TIPO E EQUIPO: " + tipodeequipo);
+            Console.WriteLine(" ===========");
+            Console.WriteLine("");
+            Console.WriteLine(" ===========");
+            Console.WriteLine(" JUGADORES");
+            Console.WriteLine(" ===========");
+            Console.WriteLine("");
+            int n = 1;
+            foreach (Jugador j in e.jugadores)
+            {
+                
+
+                Console.WriteLine("JUGADOR " + n+":");
+                Console.WriteLine(" ===============");
+                j.Verinformacionpersona();
+                Console.WriteLine(" ===============");
+                n += 1;
+            }
+            Console.WriteLine("");
+            Console.WriteLine(" ===========");
+            Console.WriteLine(" MEDICO");
+            Console.WriteLine(" ===========");
+            Console.WriteLine("");
+            e.medico.Verinformacionpersona();
+            Console.WriteLine("");
+            Console.WriteLine(" ===========");
+            Console.WriteLine(" ENTRENADOR");
+            Console.WriteLine(" ===========");
+            Console.WriteLine("");
+            e.entrenador.Verinformacionpersona();
+            Console.WriteLine("");
+            Console.WriteLine("");
         }
     }
 

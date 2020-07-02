@@ -13,10 +13,11 @@ namespace examen_jcgubbins
         public string nacion;
         private string sueldo;
 
-        protected string Nacion { get => nacion; set => nacion = value; }
+        public string Nacion { get => nacion; set => nacion = value; }
         protected int Edad { get => edad; set => edad = value; }
         protected string Nombre { get => nombre; set => nombre = value; }
         protected string Sueldo { get => sueldo; set => sueldo = value; }
 
+        public abstract void Verinformacionpersona();
     }
 }

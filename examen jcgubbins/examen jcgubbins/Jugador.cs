@@ -27,6 +27,11 @@ namespace examen_jcgubbins
             this.Puntosdefensa = puntosd;
             this.Numerocamiseta = numerocamiseta;
         }
-
+        public override void Verinformacionpersona()
+        {
+            Console.WriteLine("Nombre: "+ Nombre);
+            Console.WriteLine("Puntos de ataque: " + Puntosataque);
+            Console.WriteLine("Puntos de defensa: " + Puntosdefensa);
+        }
     }
 }

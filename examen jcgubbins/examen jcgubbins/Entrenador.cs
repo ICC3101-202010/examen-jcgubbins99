@@ -21,5 +21,15 @@ namespace examen_jcgubbins
             this.Puntostactica = puntost;
 
         }
+        public override void Verinformacionpersona()
+        {
+            Console.WriteLine("Nombre: " + Nombre);
+            Console.WriteLine("Puntos de tactica: " + Puntostactica);
+        }
+        public void Cambiarjugador(Jugador j)
+        {
+
+        }
+       
     }
 }

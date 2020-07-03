@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace examen_jcgubbins
 {
-    public class Jugador: Person
+    public class Jugador : Person
     {
         private int puntosataque;
         private int puntosdefensa;
@@ -29,9 +29,22 @@ namespace examen_jcgubbins
         }
         public override void Verinformacionpersona()
         {
-            Console.WriteLine("Nombre: "+ Nombre);
+            Console.WriteLine("Nombre: " + Nombre);
             Console.WriteLine("Puntos de ataque: " + Puntosataque);
             Console.WriteLine("Puntos de defensa: " + Puntosdefensa);
         }
+
+        public delegate void AvisarLesionEventHandler(object source, AvisarLesionEventArgs args);
+        public event AvisarLesionEventHandler Lesionavisada;
+        protected virtual void Onavisarlesion()
+        {
+            if (Lesionavisada != null)
+            {
+                Lesionavisada(this, new AvisarLesionEventArgs());
+            }
+
+        } //La cual se gatilla en la clase partido, El partido avisara al entrenador quien hara el cambio.
     }
+
+        
 }
